@@ -1,34 +1,39 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
-import TabsPage from '../views/TabsPage.vue'
+
+import radioView from '../views/radioView.vue'
+import InicioSesion from '../views/InicioSesion.vue'
+import cancionesView from '../views/cancionesView.vue'
+import PerfilView from '@/views/perfilView.vue';
+
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    redirect: '/tabs/tab1'
+    redirect: '/canciones'
   },
   {
-    path: '/tabs/',
-    component: TabsPage,
-    children: [
-      {
-        path: '',
-        redirect: '/tabs/tab1'
-      },
-      {
-        path: 'tab1',
-        component: () => import('@/views/Tab1Page.vue')
-      },
-      {
-        path: 'tab2',
-        component: () => import('@/views/Tab2Page.vue')
-      },
-      {
-        path: 'tab3',
-        component: () => import('@/views/Tab3Page.vue')
-      }
-    ]
-  }
+    path:'/login',
+    name:'login',
+    component:InicioSesion,
+    
+  },
+  {
+    path:'/canciones',
+    name:'canciones',
+    component:cancionesView,
+  }, 
+  {
+    path:'/radio',
+    name:'radio',
+    component:radioView,
+  }, 
+  {
+    path:'/perfil',
+    name:'perfil',
+    component:PerfilView,
+  }, 
+  
 ]
 
 const router = createRouter({

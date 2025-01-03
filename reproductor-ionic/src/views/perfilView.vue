@@ -17,6 +17,12 @@
         <p v-if="decodedToken">Correo del usuario: {{ decodedToken.email }}</p>
         <p v-else>No estás autenticado.</p>
       </div>
+      <ion-button href="/miscanciones" >
+        <ion-label>Mis Canciones</ion-label>
+      </ion-button>
+      <ion-button href="/subircancion" >
+        <ion-label>Subir Cancion</ion-label>
+      </ion-button>
     </ion-content>
   </ion-page>
 </template>
@@ -24,7 +30,7 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue';
 import { useUserStore } from '../store/store';
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue';
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonButton } from '@ionic/vue';
 
 
 const userStore = useUserStore();

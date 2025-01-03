@@ -5,6 +5,10 @@ import radioView from '../views/radioView.vue'
 import InicioSesion from '../views/InicioSesion.vue'
 import cancionesView from '../views/cancionesView.vue'
 import PerfilView from '@/views/perfilView.vue';
+import subirCancion from '../views/subirCancion.vue';
+import editarCancion from '../views/editarCancion.vue';
+import misCanciones from '@/views/misCanciones.vue'
+
 
 
 const routes: Array<RouteRecordRaw> = [
@@ -16,6 +20,25 @@ const routes: Array<RouteRecordRaw> = [
     path:'/login',
     name:'login',
     component:InicioSesion,
+    
+  },
+  {
+    path:'/editarcancion',
+    name:'editarcancion',
+    component:editarCancion,
+    
+  },
+  {
+    path:'/miscanciones',
+    name:'miscanciones',
+    component:misCanciones,
+    
+  },
+  
+  {
+    path:'/subircancion',
+    name:'subircancion',
+    component:subirCancion,
     
   },
   {
